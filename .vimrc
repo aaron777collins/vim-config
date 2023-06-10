@@ -8,6 +8,7 @@ Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'sheerun/vim-polyglot' " For colouring
 Plug 'https://github.com/preservim/nerdtree', { 'on': 'NERDTreeToggle' } " For exploring files
 Plug 'LunarWatcher/auto-pairs'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
