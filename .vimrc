@@ -12,11 +12,37 @@ Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'dense-analysis/ale'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'rhysd/vim-lsp-ale'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 call plug#end()
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
+" ALE config
+"set completeopt=menu,menuone,preview,noselect,noinsert
+let g:ale_completion_enabled = 1
+let g:ale_completion_autoimport = 1
+set omnifunc=ale#completion#OmniFunc
+"let g:ale_linters = {'python': ['flake8']}
+let g:ale_linters = {'python': ['pylint']}
+"let g:ale_fixers = {'python': ['autopep8', 'autoimport']}
+
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+" Use <Tab> and <S-Tab> to navigate through popup menu and use the right arrow
+" to autocomplete when navigating with arrow keys
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <Right> pumvisible() ? "\<C-y>" : "\<Right>"
+" Use <Tab to autocomplete the current line
+"inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
+
  
 " set the runtime path to include Vundle and initialize Vundle
 " The directory should be changed in case you downloaded in case you download it somewhere else
