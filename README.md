@@ -9,3 +9,5 @@ This is my current vim config
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 4. Go into vim and run `PlugInstall` and `PluginInstall`. This will install all the plugins.
+
+*You may want to install pylint using pip3 to get python linting and use the :LSPInstallServer <the server> to get a language server for completion suggestions.*
