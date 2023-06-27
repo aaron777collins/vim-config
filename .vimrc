@@ -10,7 +10,7 @@ Plug 'https://github.com/preservim/nerdtree', { 'on': 'NERDTreeToggle' } " For e
 Plug 'LunarWatcher/auto-pairs'
 Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'dense-analysis/ale'
 Plug 'prabirshrestha/vim-lsp'
